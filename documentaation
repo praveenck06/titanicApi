@@ -1,0 +1,60 @@
+
+CREATE 
+
+request:{
+    type:"post",
+    URL:"/passengers/"
+}
+
+argument:
+{
+"passenger":{
+	"PassengerId":"9992",
+        "Survived":"0",
+        "Pclass" :"66",
+        "Name" :"Deepak",
+        "Sex" :"male",
+        "Age" :"33",
+        "Ticket" :"45555",
+        "Fare" :"45.26",
+        "Cabin":"B3"
+}
+}
+
+
+READ 
+
+request:{
+    type:"GET",
+    URL:"/passengers/"
+}
+
+
+UPDATE
+
+request:{
+    type:"patch",
+    URL:"/passengers/"
+}
+
+argument:
+
+{
+"passenger":{
+	"PassengerId":"9992",
+        "Survived":"0",
+        "Pclass" :"66",
+        "Name" :"Deepak",
+        "Sex" :"male",
+        "Age" :"33",
+        "Ticket" :"45555",
+        "Fare" :"45.26",
+        "Cabin":"B3"
+}
+}
+
+DELETE
+request:{
+    type:"DELETE",
+    URL:"/passengers/"
+}
