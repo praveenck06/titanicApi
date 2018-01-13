@@ -3,6 +3,7 @@ const mongoose      = require("mongoose")
 
 
 const passengerSchema = mongoose.Schema({
+    
     Survived:Number,
     Pclass:Number,
     Name:String,

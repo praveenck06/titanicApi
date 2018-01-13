@@ -25,7 +25,6 @@ router.post('/signup', (req, res) => {
                     });
                     user.save()
                     .then(result => {
-                        console.log(result)
                         res.status(201).json({
                             message:"user created"
                         })
