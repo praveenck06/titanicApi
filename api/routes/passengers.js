@@ -191,7 +191,7 @@ var formatResult = docs => {
                request:{
                    message:"For more information",
                    type:"GET",
-                   URL:""+doc._id
+                   URL:"https://rocky-sands-97493.herokuapp.com/passengers"+doc._id
                    }
                }
 
