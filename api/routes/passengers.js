@@ -47,7 +47,7 @@ router.put('/:passengerId', checkAuth, (req, res) => {
             request:{
                 message:"Updated Passenger details",
                 type:"GET",
-                URL:"https://rocky-sands-97493.herokuapp.com/passengers"+updatedPassenger._id
+                URL:"https://rocky-sands-97493.herokuapp.com/passengers/"+updatedPassenger._id
             }
         })
     })
@@ -152,7 +152,7 @@ router.get('/:passengerId', (req, res) => {
                 request:{
                     message:"Get all Passengers ",
                     type:"GET",
-                    URL:"https://rocky-sands-97493.herokuapp.com/passengers"
+                    URL:"https://rocky-sands-97493.herokuapp.com/passengers/"
                 }
             })
         }else{
@@ -191,7 +191,7 @@ var formatResult = docs => {
                request:{
                    message:"For more information",
                    type:"GET",
-                   URL:"https://rocky-sands-97493.herokuapp.com/passengers"+doc._id
+                   URL:"https://rocky-sands-97493.herokuapp.com/passengers/"+doc._id
                    }
                }
 
