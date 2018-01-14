@@ -167,7 +167,34 @@ router.get('/adults', (req, res) => {
        })
 
 })
+//..................................Male...........................
+router.get('/male', (req, res) => {
+    Passenger.find({Sex:"male"})
+       .then(docs => {
+           const response = formatResult(docs)
+           res.status(200).json(response)
+       })
+       .catch(err => {
+           res.status(500).json({
+               error:err
+           })
+       })
 
+})
+//.................................Female.........................
+router.get('/female', (req, res) => {
+    Passenger.find({Sex:"female"})
+       .then(docs => {
+           const response = formatResult(docs)
+           res.status(200).json(response)
+       })
+       .catch(err => {
+           res.status(500).json({
+               error:err
+           })
+       })
+
+})
 
 //..............................TO GET SPECIFIC PASSENGERS DETAILS..............................
 router.get('/:passengerId', (req, res) => {
