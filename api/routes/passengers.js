@@ -138,7 +138,7 @@ router.get('/died', (req, res) => {
 
 //..............................TO GET DETAILS OF PASSENGERS WHO WERE CHILDERN.....................
 
-router.get('/childern', (req, res) => {
+router.get('/children', (req, res) => {
     Passenger.find({Age:{$lte:12}})
        .then(docs => {
            const response = formatResult(docs)
