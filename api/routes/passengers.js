@@ -154,7 +154,7 @@ router.get('/childern', (req, res) => {
 
 //..............................TO GET DETAILS OF PASSENGERS WHO WERE ADULTS.....................
 
-router.get('/adult', (req, res) => {
+router.get('/adults', (req, res) => {
     Passenger.find({Age:{$gt:12}})
        .then(docs => {
            const response = formatResult(docs)
