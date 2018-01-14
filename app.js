@@ -10,7 +10,7 @@ const express           = require("express"),
       
 mongoose.Promise =global.Promise;
 //mongoose.connect("mongodb://localhost/titanic", {useMongoClient: true});
-mongoose.connect("mongodb://praveen:praveen@ds251807.mlab.com:51807/titanic", {useMongoClient: true});
+mongoose.connect("mongodb://titanic:titanic@ds251807.mlab.com:51807/titanic", {useMongoClient: true});
 
 
 const app = express();

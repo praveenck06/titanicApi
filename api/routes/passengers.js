@@ -25,15 +25,31 @@ router.get('/',(req, res) => {
 // ........................................ADD PASSENGER DETAILS..............................................
 router.post('/' ,checkAuth,(req, res) => {
     const passenger = new Passenger(req.body.passenger)
-    console.log(passenger)
     passenger.save()
     .then(result => {
-           res.status(201).json(result)
-           console.log(passenger);
-       })
+          res.status(201).json(result)
+          console.log(passenger);
+      })
     .catch(err => {
-           res.status(500).json(err)
-       })
+          res.status(500).json(err)
+      })
+    
+    
+    // const passengers = req.body.passengers;
+    // Promise.all(passengers.map(passenger => {
+    //      const createdPassenger = new Passenger(passenger)
+    //      createdPassenger.save()
+    // }))
+    // .then(saved => {
+    //     res.status(201).json({
+    //         message:"All passengers added"
+    //     })
+    // })
+    // .catch(err => {
+    //     res.status(500).json({
+    //         error:err
+    //     })
+    // })
 });
 
 
