@@ -22,6 +22,20 @@ router.get('/',(req, res) => {
 })
 
 
+
+// {"passenger":{
+//         "Survived":"0",
+//         "Pclass" :"66",
+//         "Name" :"Deepak",
+//         "Sex" :"male",
+//         "Age" :"33",
+//         "Ticket" :"45555",
+//         "Fare" :"45.26",
+//         "Cabin":"B3"
+// }
+// }
+
+
 // ........................................ADD PASSENGER DETAILS..............................................
 router.post('/' ,checkAuth,(req, res) => {
     const passenger = new Passenger(req.body.passenger)
@@ -140,7 +154,7 @@ router.get('/childern', (req, res) => {
 
 //..............................TO GET DETAILS OF PASSENGERS WHO WERE ADULTS.....................
 
-router.get('/childern', (req, res) => {
+router.get('/adult', (req, res) => {
     Passenger.find({Age:{$gt:12}})
        .then(docs => {
            const response = formatResult(docs)
@@ -221,17 +235,6 @@ module.exports = router;
 
 
 
-// {"passenger":{
-//         "Survived":"0",
-//         "Pclass" :"66",
-//         "Name" :"Deepak",
-//         "Sex" :"male",
-//         "Age" :"33",
-//         "Ticket" :"45555",
-//         "Fare" :"45.26",
-//         "Cabin":"B3"
-// }
-// }
 
 
 
